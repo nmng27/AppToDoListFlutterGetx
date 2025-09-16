@@ -3,7 +3,7 @@ class User {
   final String name;
   final String mail;
   final String phone;
-  final String dateBirth;
+  final DateTime dateBirth;
   final String password;
 
   User({

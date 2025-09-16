@@ -7,6 +7,7 @@ class DropdownTextField extends StatefulWidget {
   final List<String> items;
   final String? value; 
   final ValueChanged<String?>? onChanged; 
+  final Icon icon;
 
   const DropdownTextField({
     Key? key,
@@ -15,6 +16,7 @@ class DropdownTextField extends StatefulWidget {
     required this.items,
     this.value,
     this.onChanged,
+    required this.icon
   }) : super(key: key);
 
   @override
@@ -35,6 +37,7 @@ class _DropdownTextFieldState extends State<DropdownTextField> {
         }).toList(),
         onChanged: widget.onChanged, 
         decoration: InputDecoration(
+          prefixIcon: widget.icon,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: getColor()!),

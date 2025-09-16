@@ -47,3 +47,13 @@ class _Button extends State<Button>{
       child: Text(isPressed == false ? widget.label : "Carregando..."));
   }
 }
+
+class Link extends StatelessWidget{
+  final text1 = Text("Não possui conta?", style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: getColor()),);
+  final text2 = Text("Cadastre-se", style: TextStyle(color: getColor(), fontWeight: FontWeight.w700));
+  @override
+  Widget build(BuildContext context) {      
+    return TextButton(
+      onPressed: ()=>Get.toNamed("/register"), child: Text("${text1} ${text2}"));
+  }
+}

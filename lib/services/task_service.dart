@@ -5,6 +5,10 @@ class TaskService extends GetxController {
   final RxList<Task> tasks = <Task>[].obs;
   final RxList<Task> tasksFiltered = <Task>[].obs;
 
+  Task getTaskById(int id){
+    return tasks.where((e)=>e.id == id).single;
+  }
+
   void add(Task task) {
     tasks.add(task);
     tasksFiltered.add(task);
