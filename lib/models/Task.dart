@@ -45,3 +45,16 @@ class Task {
     };
   }
 }
+
+List<String> getAllCategories(){
+  List<String> list = List.empty();
+  list.add(
+    Categorys.APOSENTADORIA.toString()
+  );
+  list.add(Categorys.ESTUDO.toString());
+  list.add(Categorys.FAMILIA.toString());
+  list.add(Categorys.LAZER.toString());
+  list.add(Categorys.TRABALHO.toString());
+  list.add(Categorys.VIAGENS.toString());
+  return list;
+}
